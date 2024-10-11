@@ -83,7 +83,7 @@ class TrainConfig:
 class DataConfig:
     dataset: str = "speech_dataset"
     file: str = "src/slam_llm/datasets/speech_dataset.py:get_speech_dataset"
-    train_data_path: Optional[str] = "/home/liu.ten/demo/SLAM-LLM/examples/asr_librispeech/train_data.jsonl"
+    train_data_path: Optional[str] = "/home/an.p/demo1/demo/SLAM-LLM/examples/asr_librispeech/train_data.jsonl"
     val_data_path: Optional[str] = None
     train_split: str = "train"
     test_split:str = "validation"
@@ -118,9 +118,9 @@ class FSDPConfig:
 @dataclass
 class LogConfig:
     use_wandb: bool = False
-    wandb_dir: str = "/home/liu.ten/test_wandb"
+    wandb_dir: str = "/home/an.p/test_wandb"
     wandb_entity_name: str = "project_name"
     wandb_project_name: str = "project_name"
     wandb_exp_name: str = "exp_name"
-    log_file: str = "/home/liu.ten/test.log"
+    log_file: str = "/home/an.p/test.log"
     log_interval: int = 5

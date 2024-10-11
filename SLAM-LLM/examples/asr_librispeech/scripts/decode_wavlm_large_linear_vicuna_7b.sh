@@ -4,17 +4,17 @@ export CUDA_VISIBLE_DEVICES=0
 export TOKENIZERS_PARALLELISM=false
 # export CUDA_LAUNCH_BLOCKING=1
 
-run_dir=/home/liu.ten/demo/SLAM-LLM
+run_dir=/home/an.p/demo1/demo/SLAM-LLM
 cd $run_dir
 code_dir=examples/asr_librispeech
 
-speech_encoder_path=/home/liu.ten/demo/SLAM-LLM/src/slam_llm/models/WavLM-Large.pt
+speech_encoder_path=/home/an.p/demo1/demo/SLAM-LLM/src/slam_llm/models/WavLM-Large.pt
 llm_path=lmsys/vicuna-7b-v1.5
 
-output_dir=/home/liu.ten/demo/tmp/vicuna-7b-v1.5-librispeech-linear-steplrwarmupkeep1e-4-wavlm-large-241008
+output_dir=/home/an.p/demo1/demo/tmp/vicuna-7b-v1.5-librispeech-linear-steplrwarmupkeep1e-4-wavlm-large-241008
 ckpt_path=$output_dir/asr_epoch_1_step_1000
 split=librispeech_test_clean
-val_data_path=/home/liu.ten/demo/SLAM-LLM/examples/asr_librispeech/${split}.jsonl
+val_data_path=/home/an.p/demo1/demo/SLAM-LLM/examples/asr_librispeech/${split}.jsonl
 decode_log=$ckpt_path/decode_${split}_beam4
 
 # -m debugpy --listen 5678 --wait-for-client
